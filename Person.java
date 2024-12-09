@@ -14,6 +14,9 @@ public class Person
         age = x;
     }
     public setSSN(String s) {
-        SSn = s;
+        SSN = s;
+    }
+    public String toString() {
+        String formatted = "";
     }
 }
