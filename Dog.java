@@ -1,8 +1,8 @@
 public class Dog
 {
-    public String breed;
-    public String size;
-    public String furColor;
+    private String breed;
+    private String size;
+    private String furColor;
     public String bark() {
         return "barked";
     }
