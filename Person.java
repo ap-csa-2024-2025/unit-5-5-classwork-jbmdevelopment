@@ -4,19 +4,20 @@ public class Person
     private String last;
     private int age;
     private String SSN;
-    public setFirst(String name) {
+    public void setFirst(String name) {
         first = name;
     }
-    public setLast(String name) {
+    public void setLast(String name) {
         last = name;
     }
-    public setAge(int x) {
+    public void setAge(int x) {
         age = x;
     }
-    public setSSN(String s) {
+    public void setSSN(String s) {
         SSN = s;
     }
     public String toString() {
-        String formatted = "";
+        String formatted = "SSN " + SSN + "\n Name: " + first + " " + last + " \n Age: " + age;
+        return formatted;
     }
 }
