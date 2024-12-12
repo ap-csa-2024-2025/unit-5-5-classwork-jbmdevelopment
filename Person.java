@@ -38,7 +38,7 @@ public class Person
         }
         Person temp = (Person) other;
         if(age == temp.getAge() && first.equals(temp.getFirst()) && last.equals(temp.getLast()) &&
-         SSN.equals(temp.getSSN())+_) {
+         SSN.equals(temp.getSSN())) {
             return true;
         }
         return false;
