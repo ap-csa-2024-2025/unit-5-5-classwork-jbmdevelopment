@@ -16,8 +16,31 @@ public class Person
     public void setSSN(String s) {
         SSN = s;
     }
+    public int getAge() {
+        return age;
+    }
+    public String getFirst() {
+        return first;
+    }
+    public String getLast() {
+        return last;
+    }
+    public String getSSN(){
+        return SSN;
+    }
     public String toString() {
-        String formatted = "SSN " + SSN + "\n Name: " + first + " " + last + " \n Age: " + age;
+        String formatted = "\tSSN " + SSN + "\n \tName: " + first + " " + last + " \n \tAge: " + age;
         return formatted;
+    }
+    public boolean equals(Object other) {
+        if(other == null) {
+            return false;
+        }
+        Person temp = (Person) other;
+        if(age == temp.getAge() && first.equals(temp.getFirst()) && last.equals(temp.getLast()) &&
+         SSN.equals(temp.getSSN())) {
+            return true;
+        }
+        return false;
     }
 }
