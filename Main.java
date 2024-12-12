@@ -34,7 +34,7 @@ public class Main {
     boolean ovenStatus = true; // object created so assume its on?
     String status = "";
     while(ovenStatus) { // run as long as it's on :)
-        //oven.getStatus();
+        System.out.println(oven.updateStatus());
         System.out.println("Test");
         //System.out.println("To preheat the oven enter \"p\" to turn the oven off enter \"o\", \n"
         //"to restart enter \"r\", to quit enter \"q\"");
