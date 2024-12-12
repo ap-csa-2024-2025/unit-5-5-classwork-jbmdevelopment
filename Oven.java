@@ -1,19 +1,29 @@
 public class Oven
 {
-    private int maxTemp;
-    private int currentTemp;
-    static boolean isOn = false; 
+
+    private int maxTemp = 450; // max
+    private int currentTemp = 70; // starting
+    static boolean ON = false; 
     public int getMaxTemp() {
         return maxTemp;
     }
     public int getCurrentTemp() {
         return currentTemp;
     }
+    public String updateStatus() {
+        return "New oven with a maximum temperature of " + maxTemp + " 
+        and a starting temperature of " + 70 " degrees.";
+
+    }
     public void turnOff() {
-        isOn = !isOn;
+        ON = false;
+        currentTemp = 0;
     }
     public boolean isOn() {
-        return isOn;
+        if(currentTemp > 0) {
+            return true;
+        }
+        return false;
     }
     public void preheat(int temp) {
 
