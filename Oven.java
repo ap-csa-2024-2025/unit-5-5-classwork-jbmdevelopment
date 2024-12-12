@@ -12,7 +12,7 @@ public class Oven
     }
     public String updateStatus() {
         return "New oven with a maximum temperature of " + maxTemp + " 
-        and a starting temperature of " + 70 " degrees.";
+        and a starting temperature of " + currentTemp + " degrees.";
 
     }
     public void turnOff() {
