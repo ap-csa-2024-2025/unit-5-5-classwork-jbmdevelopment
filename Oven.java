@@ -10,9 +10,16 @@ public class Oven
     public int getCurrentTemp() {
         return currentTemp;
     }
-    public String updateStatus() {
+    public void reset() {
+        maxTemp = 450;
+        currentTemp = 70;
+    }
+    public String toString() {
        return "New oven with a maximum temperature of " + maxTemp + " and a starting temperature of " + currentTemp + " degrees.";
 
+    }
+    public void quit() {
+        System.out.println("Thanks for playing this game!");
     }
     public void turnOff() {
         ON = false;
@@ -25,10 +32,9 @@ public class Oven
         return false;
     }
     public void preheat(int temp) {
-
-    }
-    public String toString() {
-        String formatted = "";
-        return formatted;
+        currentTemp = temp;
+        if(temp > maxTemp) {
+            currentTemp = maxTemp;
+        }
     }
 } 

@@ -34,28 +34,26 @@ public class Main {
     boolean ovenStatus = true; // object created so assume its on?
     String status = "";
     while(ovenStatus) { // run as long as it's on :)
-        System.out.println(oven.updateStatus());
-        System.out.println("Test");
-        //System.out.println("To preheat the oven enter \"p\" to turn the oven off enter \"o\", \n"
-        //"to restart enter \"r\", to quit enter \"q\"");
-        status = input.nextLine().toLowerCase();
+       System.out.println(oven.toString());
+       System.out.println("To preheat the oven enter \"p\", to turn the oven off enter \"o\", \n" + 
+                   "to restart enter \"r\", to quit enter \"q\"");status = input.nextLine().toLowerCase();
         ovenStatus = oven.isOn();
         if(status.equals("p")) {
-
+          System.out.println("Enter a temperature to preheat the oven to");
+          int temper = input.nextInt();
+          oven.preheat(temper);
+          System.out.println("Current temperature of the oven is now " + oven.getCurrentTemp() + " degrees"); 
         } else if(status.equals("o")) {
-          ovenStatus = false; // use a getter later (im lazy lol)
           oven.turnOff();
+          System.out.println("Turning off the oven");
         } else if(status.equals("r")) {
-          
+          oven.reset();
         } else if(status.equals("q")) {
-          ovenStatus = false;
           oven.turnOff();
+          oven.quit();
+          ovenStatus = false;
         }
     }
-
-    // END #1
-    // START #2
-    
-    // END #2
+    // done
   }
 }
