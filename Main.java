@@ -39,14 +39,17 @@ public class Main {
         //System.out.println("To preheat the oven enter \"p\" to turn the oven off enter \"o\", \n"
         //"to restart enter \"r\", to quit enter \"q\"");
         status = input.nextLine().toLowerCase();
+        ovenStatus = oven.isOn();
         if(status.equals("p")) {
 
         } else if(status.equals("o")) {
           ovenStatus = false; // use a getter later (im lazy lol)
+          oven.turnOff();
         } else if(status.equals("r")) {
           
         } else if(status.equals("q")) {
-
+          ovenStatus = false;
+          oven.turnOff();
         }
     }
 
